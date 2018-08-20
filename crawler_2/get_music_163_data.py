@@ -1,8 +1,5 @@
 # coding: utf-8
 import csv
-import time
-
-import chardet
 from selenium import webdriver
 
 
@@ -15,10 +12,10 @@ def get_data_1():
     url = "https://music.163.com/#/discover/playlist/?order=hot&cat=%E5%85%A8%E9%83%A8&limit=35&offset=0"
 
     # 使用PhantomJS创建一个Selenium的Webdriver
-    driver = webdriver.Firefox()
+    driver = webdriver.PhantomJS()
 
     # 创建一个csv文件
-    csv_file = open('playList.csv', 'w', newline='')
+    csv_file = open('playList.csv', 'w', newline='', encoding='utf-8')
     writer = csv.writer(csv_file)
     writer.writerow(['歌单标题', '播放数', '链接url'])
     index = 1
@@ -47,10 +44,10 @@ def get_data_1():
             #     number_int = int(number_str)
                 msk = data.find_element_by_css_selector("a.msk")
                 title_str = msk.get_attribute('title')
-                if '\u2022' in title_str:
-                    title_str = title_str.replace('\u2022', '')
-                if '\ufe0f' in title_str:
-                    title_str = title_str.replace('\ufe0f', '')
+                # if '\u2022' in title_str:
+                #     title_str = title_str.replace('\u2022', '')
+                # if '\ufe0f' in title_str:
+                #     title_str = title_str.replace('\ufe0f', '')
                 href_str = msk.get_attribute('href')
                 writer.writerow([title_str, number_int, href_str])
 
