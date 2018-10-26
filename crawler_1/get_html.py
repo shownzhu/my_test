@@ -1,3 +1,4 @@
+import datetime
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
@@ -18,3 +19,22 @@ def get_html_2():
     for text in text_list:
         print(text.get_text())
     html.close()
+
+
+def get_time_test():
+    start_time = datetime.datetime.now()
+    print("start_time:", start_time)
+    end_time = datetime.datetime.strptime("2018-09-06 10:20:00", '%Y-%m-%d %H:%M:%S')
+    print("end_time: 2018-09-06 10:20:00")
+    a = (start_time - end_time).seconds
+    print("seconds:", a)
+    print("hours:", a / 3600)
+
+
+def test_list():
+    list_1 = [1, 2, 3, 4, 5]
+    list_dic = [{"id": 1}, {"id": 2}, {"id": 4}, {"id": 4}, {"id": 5}]
+    result = 0
+    if list_dic.id > list_1:
+        result += 1
+    return result
