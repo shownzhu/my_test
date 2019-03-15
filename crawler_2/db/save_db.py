@@ -1,6 +1,10 @@
 import mysql.connector
 
 
+QQ_USER = "740244173"
+QQ_PASSWORD = "fly1219"
+
+
 # connect default db
 def connect_default_mysql():
     user_name = "root"
