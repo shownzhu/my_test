@@ -3,13 +3,18 @@ import csv
 from selenium import webdriver
 
 
+# 大于500万
 def get_net_east_data_1(url, play_number):
+    # url--需要爬取的网址
+
+    # 浏览器驱动程序
+    executable_path = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver"
 
     # 使用PhantomJS创建一个Selenium的Webdriver
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path=executable_path)
 
     # 创建一个csv文件
-    csv_file = open('./date/playList-netease.csv', 'w', newline='', encoding='utf-8')
+    csv_file = open('date/playList-netease.csv', 'w', newline='', encoding='utf-8')
     writer = csv.writer(csv_file)
     writer.writerow(['歌单标题', '播放数', '链接url'])
     index = 1

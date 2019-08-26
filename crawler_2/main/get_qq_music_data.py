@@ -8,11 +8,17 @@ from crawler_2.db.save_db import QQ_USER, QQ_PASSWORD
 
 def get_qq_music_data(url, play_number):
 
+    # 浏览器驱动程序
+    executable_path = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver"
+
     # 使用PhantomJS创建一个Selenium的Webdriver
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path=executable_path)
+
+    # # 使用PhantomJS创建一个Selenium的Webdriver
+    # driver = webdriver.Chrome()
 
     # 创建一个csv文件
-    csv_file = open('./date/playList-qq.csv', 'w', newline='', encoding='utf-8')
+    csv_file = open('date/playList-qq.csv', 'w', newline='', encoding='utf-8')
     writer = csv.writer(csv_file)
     writer.writerow(['歌单标题', '作者', '播放数', '链接url', '作者主页url'])
     index = 1

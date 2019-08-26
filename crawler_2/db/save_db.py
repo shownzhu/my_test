@@ -1,8 +1,8 @@
 import mysql.connector
 
 
-QQ_USER = "740244173"
-QQ_PASSWORD = "fly1219"
+QQ_USER = "909569254"
+QQ_PASSWORD = "15638396298"
 
 
 # connect default db
