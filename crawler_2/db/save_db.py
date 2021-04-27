@@ -1,18 +1,19 @@
-import mysql.connector
-
-
-QQ_USER = "909569254"
-QQ_PASSWORD = "15638396298"
-
-
-# connect default db
-def connect_default_mysql():
-    user_name = "root"
-    password = "root123456"
-    database = "crawler"
-    # ´ò¿ªÊý¾Ý¿âÁ¬½Ó£¨Çë¸ù¾Ý×Ô¼ºµÄÓÃ»§Ãû¡¢ÃÜÂë¼°Êý¾Ý¿âÃû³Æ½øÐÐÐÞ¸Ä£©
-    cnn = mysql.connector.connect(user=user_name, passwd=password, database=database)
-
-    # Ê¹ÓÃcursor()·½·¨»ñÈ¡²Ù×÷ÓÎ±ê
-    cursor = cnn.cursor()
-    return cnn, cursor
+# coding: utf-8
+# import mysql.connector
+#
+#
+# QQ_USER = "909569254"
+# QQ_PASSWORD = "15638396298"
+#
+#
+# # connect default db
+# def connect_default_mysql():
+#     user_name = "root"
+#     password = "root123456"
+#     database = "crawler"
+#     # ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¼°ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½Þ¸Ä£ï¿½
+#     cnn = mysql.connector.connect(user=user_name, passwd=password, database=database)
+#
+#     # Ê¹ï¿½ï¿½cursor()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Î±ï¿½
+#     cursor = cnn.cursor()
+#     return cnn, cursor

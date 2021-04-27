@@ -3,7 +3,7 @@ import csv
 from selenium import webdriver
 import time
 
-from crawler_2.db.save_db import QQ_USER, QQ_PASSWORD
+# from crawler_2.db.save_db import QQ_USER, QQ_PASSWORD
 
 
 def get_qq_music_data(url, play_number):
